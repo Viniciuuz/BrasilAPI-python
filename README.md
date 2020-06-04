@@ -30,7 +30,7 @@ print(cep.info('state')) # print only the state
 ```python
 from brasilAPI import Cep #import only the class you need
 
-cep = Cep(cep='05010000').info('all') #save response to any variable
+cep = Cep(cep='05010000').info('all') #save the response to any variable
 
 print(cep['street']) #print street from the variable you set
 ```
