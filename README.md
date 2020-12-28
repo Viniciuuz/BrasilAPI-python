@@ -9,10 +9,11 @@ Simple wraper for [BrasilAPI](https://github.com/BrasilAPI/BrasilAPI) created by
 * Python 3
 * Requests
 
-all you need is the brasilAPI file. Clone the repo and your are good to go
+all you need is the brasilAPI file. Clone the repo and you're good to go
 
 
-## Usage
+## Endpoints
+## Cep
 ### Method 1
 
 #### Recommended
@@ -35,4 +36,27 @@ from brasilAPI import Cep #import only the class you need
 cep = Cep(cep='05010000').info('all') #save response to any variable, no error handling function
 
 print(cep['street']) #print street from the variable you set
+```
+
+## Bank
+### Method 1
+```python
+from brasilAPI import Bank #import only the class you need
+
+bank = Bank(bank='260') # set the bank code
+
+#supported parameters are: ispb, name, code and fullName
+
+print(cep.info('ispb')) # print only the ispb
+print(cep.info('name')) # print only the name
+```
+
+### Method 2
+#### There is no error handling function in this method
+```python
+from brasilAPI import Bank #import only the class you need
+
+bank = Bank(bank='260').info('all') #save response to any variable, no error handling function
+
+print(bank['name']) #print street from the variable you set
 ```
