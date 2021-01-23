@@ -47,8 +47,8 @@ bank = Bank(bank='260') # set the bank code
 
 #supported parameters are: ispb, name, code and fullName
 
-print(cep.info('ispb')) # print only the ispb
-print(cep.info('name')) # print only the name
+print(bank.info('ispb')) # print only the ispb
+print(bank.info('name')) # print only the name
 ```
 
 ### Method 2
